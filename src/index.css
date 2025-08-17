@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Corpo */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: #0b0b0b;
+  overflow-x: hidden;
+}
+
+/* App Container */
+.app {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.header {
+  margin-bottom: 25px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Perfil */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #ff3f3f;
+  margin-bottom: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.profile-img:hover {
+  transform: rotate(10deg) scale(1.05);
+  box-shadow: 0 0 20px #ff3f3f;
+}
+
+/* About */
+.about {
+  margin: 20px 0;
+  font-size: 14px;
+  color: #ffffff;
+  animation: fadeInUp 1s ease 0.3s forwards;
+  opacity: 0;
+}
+
+/* Links e botões */
+.links, .links-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease 0.6s forwards;
+  opacity: 0;
+}
+
+/* Estilo unificado para links e botões */
+/* Links e Botão Crie sua bio */
+.link-card {
+  display: block;
+  padding: 14px 0; /* mesmo padding vertical dos links */
+  width: 100%; /* ocupa toda largura da coluna */
+  margin-top: 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  background: linear-gradient(90deg, #ff3f3f, #ff8c42);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+  border: none;
+}
+
+.link-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff3f3f;
+  filter: brightness(1.2);
+}
+
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease 0.9s forwards;
+  opacity: 0;
+}
+.social-links a {
+  color: #fff;
+  transition: color 0.3s, transform 0.3s, text-shadow 0.3s;
+}
+.social-links a:hover {
+  color: #ff3f3f;
+  transform: scale(1.3);
+  text-shadow: 0 0 10px #ff3f3f;
+}
+
+/* Footer */
+.footer {
+  font-size: 12px;
+  color: #ffffff;
+  animation: fadeInUp 1s ease 1.2s forwards;
+  opacity: 0;
+}
+
+/* Vídeo de fundo */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-background::after {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.55);
+}
+
+/* Animações fade-in */
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes fadeInUp { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+
+/* ======================== */
+/* Bio Pública / BioCreator CSS */
+/* ======================== */
+.bio-creator {
+  max-width: 450px;
+  margin: 20px auto;
+  text-align: center;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bio-creator h2, .bio-creator h3 {
+  margin-bottom: 15px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Inputs da BioCreator */
+.bio-creator input,
+.bio-creator textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.bio-creator textarea { resize: none; height: 80px; }
+
+/* Links da BioCreator */
+.bio-creator .links-inputs { margin: 15px 0; }
+.bio-creator .link-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.bio-creator .link-input input { flex: 1; }
+
+/* Botão salvar bio */
+.bio-creator .save-bio {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Preview da Bio */
+.bio-creator .preview-bio {
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px solid #ff3f3f;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.5);
+}
+.bio-creator .profile-img-preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #ff3f3f;
+  margin-bottom: 10px;
+}
+.bio-creator .links-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bio-creator .links-preview a {
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, #ff3f3f, #ff8c42);
+  padding: 10px;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.bio-creator .links-preview a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff3f3f;
+}
+
+/* ======================== */
+/* AuthForm CSS (Login/Cadastro) */
+/* ======================== */
+.auth-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 15px;
+  text-align: center;
+  color: #fff;
+}
+.auth-form h2 { margin-bottom: 20px; font-family: 'Orbitron', sans-serif; }
+.auth-form input { width: 100%; padding: 12px; margin: 10px 0; border-radius: 10px; border: none; outline: none; }
+.auth-form button {
+  padding: 12px 20px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #ff3f3f, #ff8c42);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.auth-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff3f3f;
+}
+.auth-form p { margin-top: 10px; cursor: pointer; color: #ff3f3f; font-size: 14px; }
