@@ -1,3 +1,4 @@
+// Header.jsx
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -9,8 +10,9 @@ function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
+      {/* Logo hospedada no Cloudinary */}
       <motion.img
-        src="/src/assets/logo.png"
+        src="https://res.cloudinary.com/dliyfpqqu/image/upload/v1755447087/u3b0noehx4hidik5oxdk.png"
         alt="Mars Websites"
         className="profile-img"
         initial={{ scale: 0 }}
