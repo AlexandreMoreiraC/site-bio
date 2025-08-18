@@ -10,7 +10,6 @@ function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-      {/* Logo hospedada no Cloudinary */}
       <motion.img
         src="https://res.cloudinary.com/dliyfpqqu/image/upload/v1755447087/u3b0noehx4hidik5oxdk.png"
         alt="Mars Websites"
@@ -33,7 +32,7 @@ function Header() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 1.5 }}
       >
-        Transformando ideias em experiências digitais futuristas
+        Transformando ideias em experiências digitais futuristicas.
       </motion.p>
     </motion.header>
   );
